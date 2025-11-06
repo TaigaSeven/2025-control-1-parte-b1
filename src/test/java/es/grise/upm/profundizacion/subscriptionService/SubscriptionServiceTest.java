@@ -21,6 +21,12 @@ public class SubscriptionServiceTest {
         subscribers = new SubscriptionService(null);
     }
 
+    //DL - Comprueba que inicialmente no hay usuario suscrito
+    @Test
+    public void noSuscribedUser(){
+        assertEquals(0, subscribers.getSubscribers().size());
+    }
+
     // DL - Comprueba si lanza mensaje cuando el usuario es null
 	@Test
     public void nullUserTest(){
